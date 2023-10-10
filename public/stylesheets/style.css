@@ -3,3 +3,29 @@
   padding: 0;
   list-style: none;
 }
+
+/* styles.css */
+
+/* Defina o background da página */
+body {
+  background-color: #292643;
+}
+
+/* Defina a cor do texto para todos os elementos */
+body,
+h1,
+p,
+a {
+  color: #BBAAB8;
+  padding: 10px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #776483;
+}
+
+.form-control {
+  padding-left: 10px;
+}
+

@@ -2,11 +2,11 @@ extends layout
 
 block content
 
-  h1 Genre: #{genre.name}
+  h1 Genero: #{genre.name}
 
   div(style='margin-left:20px;margin-top:20px')
 
-    h4 Books
+    h4 Livros
 
     dl
     each book in genre_books
@@ -15,10 +15,10 @@ block content
       dd #{book.summary}
 
     else
-      p This genre has no books.
+      p Este genero não tem livros.
 
   hr
   p
-    a(href=genre.url+'/delete') Delete genre
+    a(href=genre.url+'/delete') Exclua genero
   p
-    a(href=genre.url+'/update') Update genre
+    a(href=genre.url+'/update') Atualize genero

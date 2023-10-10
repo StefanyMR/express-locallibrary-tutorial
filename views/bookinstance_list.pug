@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  h1= title
+  h1 Lista de instâncias de livros
 
   ul
   each val in bookinstance_list
@@ -17,4 +17,4 @@ block content
         span  (Due: #{val.due_back_formatted} )
 
   else
-    li There are no book copies in this library
+    li Não há cópias de livros nesta biblioteca

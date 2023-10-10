@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  h1= title
+  h1 Lista de livros
   
   ul
     each book in book_list
@@ -10,4 +10,4 @@ block content
         |  (#{book.author.name})
 
     else
-      li There are no books.
+      li Não há livros.

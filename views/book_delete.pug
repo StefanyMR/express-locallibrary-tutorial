@@ -4,11 +4,11 @@ block content
 
   h1 #{title}: #{book.title}
 
-  p #[strong Author:]
+  p #[strong Autor:]
     a(href=book.author.url) #{book.author.name}
-  p #[strong Summary:] #{book.summary}
+  p #[strong Resumo:] #{book.summary}
   p #[strong ISBN:] #{book.isbn}
-  p #[strong Genre:]
+  p #[strong Gênero:]
     each val in book.genre
       a(href=val.url) #{val.name}
       |,
@@ -17,11 +17,11 @@ block content
 
   if book_instances.length
 
-    p #[strong Delete the following copies before attempting to delete this Book.]
+    p #[strong Exclua as seguintes cópias antes de tentar excluir este livro.]
 
     div(style='margin-left:20px;margin-top:20px')
 
-      h4 Copies
+      h4 Cópias
 
       each book_copy in book_instances
         hr
@@ -44,4 +44,4 @@ block content
       div.form-group
         input#id.form-control(type='hidden',name='id', required='true', value=book._id )
 
-      button.btn.btn-primary(type='submit') Delete
+      button.btn.btn-dark(type='submit') Deletar
