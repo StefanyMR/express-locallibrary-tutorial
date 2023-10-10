@@ -16,9 +16,10 @@ const app = express();
 // Set up rate limiter: maximum of twenty requests per minute
 const RateLimit = require("express-rate-limit");
 const limiter = RateLimit({
-  windowMs: 1 * 10 * 1000, // 10 seconds
-  max: 10,
+  windowMs: 30 * 1000, // 30 seconds
+  max: 10, // Maximum of ten requests during the specified window
 });
+
 // Apply rate limiter to all requests
 app.use(limiter);
 
