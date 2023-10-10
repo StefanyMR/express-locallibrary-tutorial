@@ -308,22 +308,4 @@ exports.book_update_post = [
   }),
 ];
 
-// Em bookController.js
-
-const Book = require('../models/book'); // Importe o modelo do livro aqui
-
-exports.book_count = async (req, res, next) => {
-  const maxTimeMilliseconds = 30000; // Defina o tempo limite em 30 segundos (30000 ms)
-
-  try {
-    const count = await Book.countDocuments({}, {
-      maxTimeMS: maxTimeMilliseconds
-    });
-
-    res.send(`Total de documentos: ${count}`);
-  } catch (error) {
-    console.error("Erro na contagem de documentos:", error);
-    res.status(500).send("Erro na contagem de documentos");
-  }
-};
 
