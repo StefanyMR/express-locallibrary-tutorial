@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  h1 Titulo: #{book.title}
+  h1= title #{book.title}
 
   p #[strong Autor:]
     a(href=book.author.url) #{book.author.name}
