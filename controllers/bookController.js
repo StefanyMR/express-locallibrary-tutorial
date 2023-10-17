@@ -18,7 +18,7 @@ exports.index = asyncHandler(async (req, res, next) => {
     Book.countDocuments({}).exec(),
     BookInstance.countDocuments({}).exec(),
     BookInstance.countDocuments({ status: "Available" }).exec(),
-    Author.countDocuments({}).exec(10000),
+    Author.countDocuments({}).exec(60000),
     Author.countDocuments({}).exec(),
   ]);
 
